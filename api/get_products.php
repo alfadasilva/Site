@@ -1,0 +1,1 @@
+<?php require __DIR__.'/_init.php'; try{ $r=$pdo->query('SELECT * FROM products ORDER BY name')->fetchAll(PDO::FETCH_ASSOC); echo json_encode(['success'=>true,'data'=>$r]); }catch(Exception $e){ echo json_encode(['success'=>false,'error'=>$e->getMessage()]); }

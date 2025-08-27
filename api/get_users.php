@@ -1,0 +1,1 @@
+<?php require __DIR__.'/_init.php'; require_login(); try{ $r=$pdo->query('SELECT id,name,email,status,purchases_count,created_at FROM users ORDER BY created_at DESC')->fetchAll(PDO::FETCH_ASSOC); echo json_encode(['success'=>true,'data'=>$r]); }catch(Exception $e){ echo json_encode(['success'=>false,'error'=>$e->getMessage()]); }

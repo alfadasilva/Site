@@ -1,0 +1,127 @@
+/* único CSS */
+:root{ --bg:#f8f9fa; --accent:#1f2937; --primary:#0d6efd; --muted:#6c757d; }
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui,Arial,sans-serif;background:var(--bg);color:#222;
+
+
+
+}
+.topbar{height:56px;
+  background:var(--accent);
+  color:#fff;
+  display:flex;
+  align-items:center;
+  gap:1rem;
+  padding:0 1rem;
+  position:fixed;
+  top:0;
+  left:0;
+  right:0;
+  z-index:1200}
+.brand{font-weight:700}
+.btn-menu{background:transparent;
+  border:0;
+  color:#fff;
+  font-size:1.1rem;
+  cursor:pointer}
+.main-wrapper{display:flex;
+  margin-top:56px;
+  min-height:calc(100vh - 56px);
+position: relative;
+}
+  
+.sidebar{width:260px;
+  background:#111827;
+  color:#e5e7eb;
+  padding:1rem;
+  transition:transform .25s ease;
+  height:auto;
+  overflow:auto;
+position: fixed;
+  top:52px;
+  bottom: 0px;
+  left:0px;
+  z-index:1000;
+
+}
+
+.sidebar.hidden{transform:translateX(-260px)}
+.sidebar .menu-links{list-style:none;padding:0;margin:0}
+.sidebar .menu-links li a{ font-size:  1.1em;display: flex;align-items:center;gap:.5rem;color:#e5e7eb;padding:.6rem .7rem;border-radius:10px;text-decoration:none;margin-bottom:.25rem}
+.sidebar .menu-links li a:hover{background:#1f2937}
+.content-area{flex:1;
+  padding:1.25rem;
+
+  margin-left:260px;
+  transition:margin-left .25s ease;
+  position: relative;
+}
+.sidebar.hidden ~ .content-area{margin-left: 0;}
+
+
+.card{background:#fff;border-radius:12px;padding:1rem;box-shadow:0 8px 24px rgba(0,0,0,.06);margin-bottom:1rem}
+.table{width:100%;border-collapse:collapse}
+.table th,.table td{padding:.6rem;border-bottom:1px solid #e9ecef}
+.stats-row{display:flex;gap:1rem;flex-wrap:wrap}
+.stat{flex:1;min-width:220px;color:#fff;padding:1rem;border-radius:10px}
+.blue{background:#2563eb}.green{background:#16a34a}.yellow{background:#f59e0b;color:#111}
+.product-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:1rem}
+.product-card{display:flex;flex-direction:column}
+.product-card img{width:100%;height:160px;object-fit:cover;border-radius:8px}
+.product-card .card-body{display:flex;flex-direction:column;gap:.5rem}
+.cart-counter{position:absolute;top:-8px;right:-10px;background:#ef4444;color:#fff;border-radius:999px;padding:2px 6px;font-size:12px}
+.login-card{box-shadow:0 8px 24px rgba(0,0,0, .06)}
+
+
+
+@media(max-width:900px){
+  .sidebar{position:fixed;left:0;top:56px;z-index:1199}
+  .sidebar.hidden{transform:translateX(-260px)}
+  .main-wrapper{flex-direction:column}
+  .content-area{padding:.9rem}
+}
+
+@media(max-width:600px){
+  .sidebar{width:70%}
+  .sidebar.hidden{transform:translateX(-100%)}
+  .content-area{margin-left:0}
+  .content-area{padding:1rem}
+  .sidebar .menu-links li a{font-size:1em}
+  .sidebar .menu-links li a i{font-size:1.2em}
+  .sidebar .menu-links li a span{display:none}
+  .sidebar .menu-links li a{padding:.5rem .6rem}
+  .sidebar .menu-links li a:hover{background:#374151}
+ 
+ 
+
+
+  
+}
+
+
+
+.small{
+  font-size: 18px;
+}
+
+
+/*Ajustes manuais*/
+.mt-3{ 
+  border-radius: 6px;
+ 
+padding: 6px;
+  background-color:#0ba21f ;
+
+}
+.mt-3 > a{
+ color: #f7f4f4;
+font-weight: bold;
+text-decoration: none;
+}
+
+.mt-3 > a:hover{
+  color: #f7f4f4;
+  text-decoration: underline;
+}
+
+
